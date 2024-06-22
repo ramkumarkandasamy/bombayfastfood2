@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "creativetask4.html", "use": "@vercel/static" },
+    { "src": "creativetask4.css", "use": "@vercel/static" },
+    { "src": "creativetask4.js", "use": "@vercel/static" }
+  ],
+  "routes": [{ "src": "/(.*)", "dest": "creativetask4.html" }]
+}

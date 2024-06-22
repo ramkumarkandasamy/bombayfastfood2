@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+    <header>
+        <h1>Your Shopping Cart</h1>
+        <nav>
+            <a href="creativetask4.html">Home</a>
+            <a href="creativetask4.html">Products</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart-container">
+            <h2>Cart Items</h2>
+
+            <div id="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+            <form class="form" onsubmit=" return sender()">
+                <label>Name</label>
+                <input type="name" id="name" name="name" placeholder="Enter Your Name" required="">
+                <label>Mobile number</label>
+                <input type="mobile" id="mobile" placeholder="Enter your message" required="">
+                <label>Address</label>
+                <textarea type="address" id="address" placeholder="Enter Your Address" required="" rows="3"></textarea>
+                <h3>Total: ₹<span id="total-price">0.00</span></h3>
+                <button type="submit" onclick="checkout()">Check out</button>
+                
+            </form>
+            <button class="back_btn" id="back2" onclick="backToOrder()">Back</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Simple eCommerce</p>
+    </footer>
+    <script src="creativetask5.js"></script>
+    <!-- <script src="creativetask.js"></script> -->
+    <script>
+        updateCart(); // Update the cart display when the page loads
+    </script> 
+       
+</body>
+</html>

@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 1em;
+    text-decoration: none;
+    backdrop-filter: blur(30px);
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-item {
+    border: 1px solid #ddd;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    width: 200px;
+}
+
+.product-item img {
+    max-width: 100%;
+}
+
+button {
+    background: #28a745;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5em 1em;
+}
+
+button:hover {
+    background: #218838;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(250, 189, 77);
+}
+.cart-section{
+    text-align: center;
+}
+.paymentsTYpe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.cart_items{
+    padding: 12px;
+    color: red;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background-color: rgb(245, 245, 245);
+    width: 125%;
+    box-shadow: 0 0 10px rgb(94, 93, 92);
+}
+.contact label{
+    text-align: left;
+    padding: 5px;
+    margin-top: 5px;
+}
+.contact input{
+    height: 34px;
+    width: 80%;
+    padding: 5px;
+    border-style: none;
+    box-shadow: 0 0 10px #333;
+    border: 2px;
+}
+.contact input:hover{
+    box-shadow: 0 0 20px #70560d;
+}
+
+.cart-container{
+    height: 100%;
+}
+.cart-container h2 {
+    text-align: center;
+    font-family: montserrat;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    margin: 12px;
+    background-color: #fff;
+    box-shadow: 0 0 10px #333;
+    border-radius: 5px;
+}
+.form:hover{
+    box-shadow: 0 0 20px #000;
+}
+.form label {
+    font-family: montserrat;
+    font-weight: bold;
+}
+.form input, textarea {
+    margin: 12px;
+    box-shadow: 0 0 5px #333;
+    border-style: none;
+    padding: 5px;
+    width: 30vw;
+}
+.form input:hover, textarea:hover, button:hover {
+    box-shadow: 0 0 10px #000;
+}
+
+.back_btn {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: orange;
+    height: 36px;
+    width: 133px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'montserrat';
+    border-style: none;
+    border-radius: 12px;
+    margin: 12px;
+}
+
+.back_btn:hover {
+    box-shadow: 0 0 10px #fff #333;
+}
+
+@media screen and (min-width: 768px) {
+    .back_btn {
+        display: block;
+    }
+}
+
+@media screen and (max-width) {
+    body {
+        height: 100vh
+    };
+    .cart-container{
+        height: 100vh;
+    }
+}

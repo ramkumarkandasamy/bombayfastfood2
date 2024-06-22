@@ -1,0 +1,2268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link
+      href="https://d33wubrfki0l68.cloudfront.net/css/134159683fc0e467a64ae99e3aa3783a3daaf7e2/css/style.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./creativetask4.css" />
+
+    <title>Bombay Fast Food</title>
+  </head>
+
+  <body>
+    <div class="banner-container">
+      <header>
+        <div class="header-logo">
+          <img src="assets/IMG-20240605-WA0006.jpg" class="logo" />
+          <h1>Bombay Fast Food</h1>
+          <img src="assets/icons8-shopping-cart-100.png" class="cartLogo" />
+        </div>
+
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="product.html">Products</a>
+          <a href="cart.html">Cart</a>
+          <img
+            src="assets/arrows.png"
+            onclick="payment()"
+            class="arrow"
+            href="cart.html"
+          />
+        </nav>
+        <a class="cart_a" href="./cart.html">Cart</a>
+      </header>
+      <div class="cart-logo"></div>
+      <!-- <div class="header">
+            <h1>Bombay Fast Food</h1>
+            <nav class="nav">
+                <a href="#menu">Menu</a>
+                <a>Contact Us</a>
+                <a>Orders</a>
+            </nav>
+        </div> -->
+      <div class="anime-text-container">
+        <div class="anime-content">
+          <span class="text first-text">BOMBAY FAST FOOD </span>
+          <span class="text sec-text" id="textAnime">CREATIVE !</span><br />
+          <span class="text first-text">The Taste Of Bombay</span>
+        </div>
+        <button class="banner_btn" id="openModalBt" href="#menu">
+          <a class="banner_btn" id="orderNow" href="#footCart">order now</a>
+        </button>
+      </div>
+    </div>
+
+    <section class="menu" id="menu">
+      <h1>Our Menu</h1>
+      <div class="product-btn" id="products">
+        <button class="product_btn all active" id="all" onclick="allBtn()">
+          All
+        </button>
+        <button class="product_btn vegSoups" id="vegSoups">VegSoups</button>
+        <button class="product_btn staters" id="starters">Starters</button>
+        <button class="product_btn pizza" id="pizza">Pizza</button>
+        <button class="product_btn Fry" id="fryRice">Fry Rice</button>
+        <button class="product_btn noodles" id="noodles">Noodles</button>
+        <button class="product_btn burger" id="burger">Burger's</button>
+        <button class="product_btn snacks" id="snacks">Snacks</button>
+        <button
+          class="product_btn cakes and pastries"
+          style="display: flex"
+          id="cakesAndPastries"
+        >
+          Cakes & Pastries
+        </button>
+      </div>
+
+      <div class="food-cart" id="foodCart">
+        <div class="cart">
+          <img class="cart-img" src="assets/images.jpg" />
+          <h1>Combo's</h1>
+          <p>
+            Delicious Burger uo, quisquam velit, magnam voluptatem repellendus
+            sed eaque
+          </p>
+          <button class="cart-btn" id="combosBtn" onclick="combosBtn()">
+            Click More...
+          </button>
+        </div>
+        <div class="cart">
+          <img
+            class="cart-img"
+            src="https://res.cloudinary.com/dtrknkktt/image/upload/v1718526901/IMG-20240616-WA0005_dcildm.jpg"
+          />
+          <h1>Veg Soup's</h1>
+          <p>
+            Delicious Burger uo, quisquam velit, magnam voluptatem repellendus
+            sed eaque
+          </p>
+          <button class="cart-btn" id="vegSoupsBtn" onclick="vegSoupsBtn()">
+            Click More...
+          </button>
+        </div>
+        <div class="cart">
+          <img
+            class="cart-img"
+            src="https://res.cloudinary.com/dtrknkktt/image/upload/v1718526895/IMG-20240616-WA0004_tfrlab.jpg"
+          />
+          <h1>Starter's</h1>
+          <p>
+            Delicious Burger uo, quisquam velit, magnam voluptatem repellendus
+            sed eaque
+          </p>
+          <button class="cart-btn" id="startersBtn" onclick="startersBtn()">
+            Click More...
+          </button>
+        </div>
+        <div class="cart">
+          <img
+            class="cart-img"
+            src="https://res.cloudinary.com/dtrknkktt/image/upload/v1717923014/pizza-5179939_640_d0layv.jpg"
+          />
+          <h1>Pizza's</h1>
+          <p>
+            Delicious Burger uo, quisquam velit, magnam voluptatem repellendus
+            sed eaque
+          </p>
+          <button class="cart-btn" id="pizzaBtn" onclick="pizzaBtn()">
+            Click More...
+          </button>
+        </div>
+        <div class="cart">
+          <img
+            class="cart-img"
+            src="https://res.cloudinary.com/dtrknkktt/image/upload/v1718526937/IMG-20240616-WA0018_vzht3u.jpg"
+          />
+          <h1>Fried Rice</h1>
+          <p>
+            Delicious Burger uo, quisquam velit, magnam voluptatem repellendus
+            sed eaque
+          </p>
+          <button class="cart-btn" id="fryRiceBtn" onclick="fryRiceBtn()">
+            Click More...
+          </button>
+        </div>
+        <div class="cart">
+          <img
+            class="cart-img"
+            src="https://res.cloudinary.com/dtrknkktt/image/upload/v1718526926/IMG-20240616-WA0015_r2nqay.jpg"
+          />
+          <h1>Noodle's</h1>
+          <p>
+            Delicious Burger uo, quisquam velit, magnam voluptatem repellendus
+            sed eaque
+          </p>
+          <button class="cart-btn" id="noodlesBtn" onclick="noodlesBtn()">
+            Click More...
+          </button>
+        </div>
+        <div class="cart">
+          <img
+            class="cart-img"
+            src="https://res.cloudinary.com/dtrknkktt/image/upload/v1717903019/Fresh_beef_burger_isolated_-1_d0ybda.jpg"
+          />
+          <h1>Burger's</h1>
+          <p>
+            Delicious Burger uo, quisquam velit, magnam voluptatem repellendus
+            sed eaque
+          </p>
+          <button class="cart-btn" id="burgersBtn" onclick="burgerBtn()">
+            Click More...
+          </button>
+        </div>
+        <div class="cart">
+          <img
+            class="cart-img"
+            src="https://res.cloudinary.com/dtrknkktt/image/upload/v1718527436/IMG-20240616-WA0020_pza0tx.jpg"
+          />
+          <h1>Snacks</h1>
+          <p>
+            Delicious Burger uo, quisquam velit, magnam voluptatem repellendus
+            sed eaque
+          </p>
+          <button class="cart-btn" id="snacksBtn" onclick="snacksBtn()">
+            Click More...
+          </button>
+        </div>
+        <div class="cart">
+          <img class="cart-img" src="assets2/unnamed.jpg" />
+          <h1>Roll</h1>
+          <p>
+            Delicious Roll deep fry spring roll, quisquam velit, magnam
+            voluptatem repellendus sed eaque
+          </p>
+          <button class="cart-btn" id="rollBtn" onclick="rollBtn()">
+            Click More...
+          </button>
+        </div>
+        <div class="cart">
+          <img
+            class="cart-img"
+            src="assets2/89bd0009710af59960e31789cac4d7af.jpg"
+          />
+          <h1>Cakes & Pastries</h1>
+          <p>
+            Delicious Roll deep fry spring roll, quisquam velit, magnam
+            voluptatem repellendus sed eaque
+          </p>
+          <button
+            class="cart-btn"
+            id="cakesAndPastriesBtn"
+            onclick="cakesAndPastriesBtn()"
+          >
+            Click More...
+          </button>
+        </div>
+        <div class="cart">
+          <img class="cart-img" src="assets2/fruit-or-juice-2.webp" />
+          <h1>Drinks (Beverages)</h1>
+          <p>
+            Delicious Roll deep fry spring roll, quisquam velit, magnam
+            voluptatem repellendus sed eaque
+          </p>
+          <button
+            class="cart-btn"
+            id="drinksBeveragesBtn"
+            onclick="drinksBeveragesBtn()"
+          >
+            Click More...
+          </button>
+        </div>
+      </div>
+      <div class="vegSoupContainer" id="vegSoupContainer">
+        <div class="vegSoupContainers">
+          <div class="cart">
+            <img class="cart-img" src="assets/paneer-soup.jpg" />
+            <h1>Paneer Soup</h1>
+            <h2>₹ 79</h2>
+            <button
+              class="cart-btn"
+              onclick="paneerSoupAddCart()"
+              id="paneerSoupAddCart"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns">
+              <button id="minus" onclick="deleteToCart('paneer soup', 79)">
+                -
+              </button>
+              <button id="num">1</button>
+              <button id="plus" onclick="addToCart('paneer soup', 79)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img class="cart-img" src="assets/Veg-Manchow-Soup-scaled.jpg" />
+            <h1>Manchurian Soup</h1>
+            <h2>₹ 39</h2>
+            <button
+              class="cart-btn"
+              id="manchurianSoupAddCart"
+              onclick="manchurianSoupAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns2">
+              <button id="minus2" onclick="deleteToCart('manchurian soup', 39)">
+                -
+              </button>
+              <button id="num2">1</button>
+              <button id="plus2" onclick="addToCart('manchurian soup', 39)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img class="cart-img" src="assets/vegetable-soup.jpg" />
+            <h1>Veg Soup</h1>
+            <h2>₹ 49</h2>
+            <button
+              class="cart-btn"
+              id="vegsoupAddCart"
+              onclick="vegsoupAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns1.1">
+              <button id="minus1.1" onclick="deleteToCart('veg soup', 49)">
+                -
+              </button>
+              <button id="num1.1">1</button>
+              <button id="plus1.1" onclick="addToCart('veg soup', 49)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img class="cart-img" src="assets/Hot-and-Sour-Soup-4.jpg" />
+            <h1>Veg Hot and Sour Soup</h1>
+            <h2>₹ 69</h2>
+            <button
+              class="cart-btn"
+              id="vegHotAndSourSoupAddCart"
+              onclick="vegHotAndSourSoupAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns1.2">
+              <button
+                id="minus1.2"
+                onclick="deleteToCart('veg Hot And Sour soup', 69)"
+              >
+                -
+              </button>
+              <button id="num1.2">1</button>
+              <button
+                id="plus1.2"
+                onclick="addToCart('veg Hot And Sour soup', 69)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+        <button class="back_btn" id="back" onclick="back()">Back</button>
+      </div>
+      <div class="startersContainer" id="startersContainer">
+        <div class="startersContainers">
+          <div class="cart">
+            <img class="cart-img" src="assets/ChilliPaneer2.jpg" />
+            <h1>Chilli Paneer</h1>
+            <h2>₹149</h2>
+            <button
+              class="cart-btn"
+              id="chilliPaneerAddCart"
+              onclick="chilliPaneerAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns3">
+              <button id="minus3" onclick="deleteToCart('chilli paneer', 149)">
+                -
+              </button>
+              <button id="num3">1</button>
+              <button id="plus3" onclick="addToCart('chilli paneer', 149)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img class="cart-img" src="assets/gobi-manchurian-recipe.jpg" />
+            <h1>Chilli Manchurian</h1>
+            <h2>₹69</h2>
+            <button
+              class="cart-btn"
+              id="chilliManchurianAddCart"
+              onclick="chilliManchurianAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns4">
+              <button
+                id="minus4"
+                onclick="deleteToCart('chilli Manchurian', 69)"
+              >
+                -
+              </button>
+              <button id="num4">1</button>
+              <button id="plus4" onclick="addToCart('chilli Manchurian', 69)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img class="cart-img" src="assets/maxresdefault.jpg" />
+            <h1>chilli Potato</h1>
+            <h2>₹49</h2>
+            <button
+              class="cart-btn"
+              id="chilliPotatoAddCart"
+              onclick="chilliPotatoAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns5">
+              <button id="minus5" onclick="deleteToCart('Chilli potato', 49)">
+                -
+              </button>
+              <button id="num5">1</button>
+              <button id="plus5" onclick="addToCart('Chilli potato', 49)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img class="cart-img" src="assets/Paneer-chutney-pakora.jpg" />
+            <h1>Paneer Pakoda</h1>
+            <h2>₹99</h2>
+            <button
+              class="cart-btn"
+              id="paneerPakodaAddCart"
+              onclick="paneerPakodaAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns6">
+              <button id="minus6" onclick="deleteToCart('Paneer Pakoda', 99)">
+                -
+              </button>
+              <button id="num6">1</button>
+              <button id="plus6" onclick="addToCart('Paneer Pakoda', 99)">
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+        <button class="back_btn" id="back2" onclick="back()">Back</button>
+      </div>
+      <div class="fryRiceContainer" id="fryRiceContainer">
+        <div class="fryRiceContainers">
+          <div class="cart">
+            <img class="cart-img" src="assets2/maxresdefault.jpg" />
+            <h1>Manchurian Fry Rice</h1>
+            <h2>₹ 59</h2>
+            <button
+              class="cart-btn"
+              onclick="manchurianFriedRiceAddCart()"
+              id="manchurianFriedRiceAddCart"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns7">
+              <button
+                id="minus7"
+                onclick="deleteToCart('manchurian Fried Rice ', 59)"
+              >
+                -
+              </button>
+              <button id="num7">1</button>
+              <button
+                id="plus7"
+                onclick="addToCart('manchurian Fried Rice ', 59)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img class="cart-img" src="assets2/Paneer-fried-rice.jpg" />
+            <h1>Paneer Fried Rice</h1>
+            <h2>₹ 79</h2>
+            <button
+              class="cart-btn"
+              id="paneerFriedRiceAddCart"
+              onclick="paneerFriedRiceAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns8">
+              <button
+                id="minus8"
+                onclick="deleteToCart('Paneer Fried Rice', 79)"
+              >
+                -
+              </button>
+              <button id="num8">1</button>
+              <button id="plus8" onclick="addToCart('Paneer Fried Rice', 79)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img class="cart-img" src="assets2/Veg-fried-rice.jpg" />
+            <h1>Veg rice</h1>
+            <h2>₹ 55</h2>
+            <button
+              class="cart-btn"
+              id="vegRiceAddCart"
+              onclick="vegRiceAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns9">
+              <button id="minus9" onclick="deleteToCart('Veg rice', 55)">
+                -
+              </button>
+              <button id="num9">1</button>
+              <button id="plus9" onclick="addToCart('Veg rice', 55)">+</button>
+            </div>
+          </div>
+          <div class="cart">
+            <img class="cart-img" src="assets2/images.jpg" />
+            <h1>Schezwan Fried Rice</h1>
+            <h2>₹ 69</h2>
+            <button
+              class="cart-btn"
+              id="schezwanFriedriceAddCart"
+              onclick="schezwanFriedriceAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns10">
+              <button
+                id="minus10"
+                onclick="deleteToCart('Schezwan Fried Rice', 69)"
+              >
+                -
+              </button>
+              <button id="num10">1</button>
+              <button
+                id="plus10"
+                onclick="addToCart('Schezwan Fried Rice', 69)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="https://res.cloudinary.com/dtrknkktt/image/upload/v1718526945/IMG-20240616-WA0017_l4122i.jpg"
+            />
+            <h1>Manchurian and Paneer Fried Rice</h1>
+            <h2>₹ 99</h2>
+            <button
+              class="cart-btn"
+              id="manchurianandpaneerfriedRiceAddCart"
+              onclick="manchurianandpaneerfriedRiceAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns2.1">
+              <button
+                id="minus2.1"
+                onclick="deleteToCart('Manchurian and Paneer Fried Rice', 99)"
+              >
+                -
+              </button>
+              <button id="num2.1">1</button>
+              <button
+                id="plus2.1"
+                onclick="addToCart('Manchurian and Paneer Fried Rice', 99)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+        <button class="back_btn" id="back3" onclick="back()">Back</button>
+      </div>
+      <div class="noodlesContainer" id="noodlesContainer">
+        <div class="noodlesContainers">
+          <div class="cart">
+            <img class="cart-img" src="assets2/veg-chowmein-min-scaled.jpg" />
+            <h1>Veg chowmien</h1>
+            <h2>₹ 69</h2>
+            <button
+              class="cart-btn"
+              onclick="vegChowmienAddCart()"
+              id="vegChowmienAddCart"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns11">
+              <button id="minus11" onclick="deleteToCart('Veg chowmien', 69)">
+                -
+              </button>
+              <button id="num11">1</button>
+              <button id="plus11" onclick="addToCart('Veg chowmien', 69)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/082c8865152d60dfa07af428a523a486.jpg"
+            />
+            <h1>Paneer chowmien</h1>
+            <h2>₹ 90</h2>
+            <button
+              class="cart-btn"
+              id="paneerChowmienAddCart"
+              onclick="paneerChowmienAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns12">
+              <button
+                id="minus12"
+                onclick="deleteToCart('Paneer chowmien', 90)"
+              >
+                -
+              </button>
+              <button id="num12">1</button>
+              <button id="plus12" onclick="addToCart('Paneer chowmien', 90)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/0u2japf8_chilli-garlic-noodles_625x300_29_December_20.jpg"
+            />
+            <h1>Schezwan chowmien</h1>
+            <h2>₹ 65</h2>
+            <button
+              class="cart-btn"
+              id="SchezwanChowmienAddCart"
+              onclick="SchezwanChowmienAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns13">
+              <button
+                id="minus13"
+                onclick="deleteToCart('Schezwan chowmien', 65)"
+              >
+                -
+              </button>
+              <button id="num13">1</button>
+              <button id="plus13" onclick="addToCart('Schezwan chowmien', 65)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/e0554ef97d46b4b52c7e4f6da8ad63fa.jpg"
+            />
+            <h1>Manchurian chowmien</h1>
+            <h2>₹ 79</h2>
+            <button
+              class="cart-btn"
+              id="manchurianChowmienAddCart"
+              onclick="manchurianChowmienAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns14">
+              <button
+                id="minus14"
+                onclick="deleteToCart('Manchurian chowmien', 79)"
+              >
+                -
+              </button>
+              <button id="num14">1</button>
+              <button
+                id="plus14"
+                onclick="addToCart('Manchurian chowmien', 79)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/Paneer-Chili-Noodles-1-1024x1024.jpg"
+            />
+            <h1>Manchurian Paneer chowmien</h1>
+            <h2>₹ 99</h2>
+            <button
+              class="cart-btn"
+              id="manchurianPaneerChowmienAddCart"
+              onclick="manchurianPaneerChowmienAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns15">
+              <button
+                id="minus15"
+                onclick="deleteToCart('Manchurian Paneer chowmien', 99)"
+              >
+                -
+              </button>
+              <button id="num15">1</button>
+              <button
+                id="plus15"
+                onclick="addToCart('Manchurian Paneer chowmien', 99)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+        <button class="back_btn" id="back4" onclick="back()">Back</button>
+      </div>
+      <div class="burgerContainer" id="burgerContainer">
+        <div class="burgerContainers">
+          <div class="cart">
+            <img class="cart-img" src="assets2/images.jpg" />
+            <h1>Cheese Burger</h1>
+            <h2>₹ 69</h2>
+            <button
+              class="cart-btn"
+              onclick="cheeseBurgerAddCart()"
+              id="cheeseBurgerAddCart"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns16">
+              <button id="minus16" onclick="deleteToCart('Cheese Burger', 69)">
+                -
+              </button>
+              <button id="num16">1</button>
+              <button id="plus16" onclick="addToCart('Cheese Burger', 69)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/dbe9c03262a3ccc46d61f561d04445ae.jpg"
+            />
+            <h1>Veg Burger</h1>
+            <h2>₹ 49</h2>
+            <button
+              class="cart-btn"
+              id="vegBurgerAddCart"
+              onclick="vegBurgerAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns17">
+              <button id="minus17" onclick="deleteToCart('Veg Burger', 49)">
+                -
+              </button>
+              <button id="num17">1</button>
+              <button id="plus17" onclick="addToCart('Veg Burger', 49)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img class="cart-img" src="assets2/Hamburger with mayonnaise.jpg" />
+            <h1>Mayonnaise Burger</h1>
+            <h2>₹ 59</h2>
+            <button
+              class="cart-btn"
+              id="mayonnaiseBurgerAddCart"
+              onclick="mayonnaiseBurgerAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns18">
+              <button
+                id="minus18"
+                onclick="deleteToCart('Mayonnaise Burger', 59)"
+              >
+                -
+              </button>
+              <button id="num18">1</button>
+              <button id="plus18" onclick="addToCart('Mayonnaise Burger', 59)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img class="cart-img" src="assets2/images.jpg" />
+            <h1>Paneer Burger</h1>
+            <h2>₹ 79</h2>
+            <button
+              class="cart-btn"
+              id="paneerBurgerAddCart"
+              onclick="paneerBurgerAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns19">
+              <button id="minus19" onclick="deleteToCart('Paneer Burger', 79)">
+                -
+              </button>
+              <button id="num19">1</button>
+              <button id="plus19" onclick="addToCart('Paneer Burger', 79)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img class="cart-img" src="assets2/1686911624250_SKU-0083_0.jpg" />
+            <h1>Cheese And Paneer Burger</h1>
+            <h2>₹ 99</h2>
+            <button
+              class="cart-btn"
+              id="cheeseAndPaneerBurgerAddCart"
+              onclick="cheeseAndPaneerBurgerAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns20">
+              <button
+                id="minus20"
+                onclick="deleteToCart('Cheese And Paneer Burger', 99)"
+              >
+                -
+              </button>
+              <button id="num20">1</button>
+              <button
+                id="plus20"
+                onclick="addToCart('Cheese And Paneer Burger', 99)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+        <button class="back_btn" id="back4" onclick="back()">Back</button>
+      </div>
+      <div class="snacksContainer" id="snacksContainer">
+        <div class="snacksContainers">
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="https://res.cloudinary.com/dtrknkktt/image/upload/v1718527436/IMG-20240616-WA0020_pza0tx.jpg"
+            />
+            <h1>Bread Pakoda</h1>
+            <h2>₹24</h2>
+            <button
+              class="cart-btn"
+              id="breadPakodaAddCart"
+              onclick="breadPakodaAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns21">
+              <button id="minus21" onclick="deleteToCart('Bread Pakoda', 24)">
+                -
+              </button>
+              <button id="num21">1</button>
+              <button id="plus21" onclick="addToCart('Bread Pakoda', 24)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="https://res.cloudinary.com/dtrknkktt/image/upload/v1718527440/IMG-20240616-WA0019_rqf5nz.jpg"
+            />
+            <h1>Spring Roll</h1>
+            <h2>₹95</h2>
+            <button
+              class="cart-btn"
+              id="springRollAddCart"
+              onclick="springRollAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns22">
+              <button id="minus22" onclick="deleteToCart('Spring Roll', 95)">
+                -
+              </button>
+              <button id="num22">1</button>
+              <button id="plus22" onclick="addToCart('Spring Roll',95)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/istockphoto-516247491-612x612.jpg"
+            />
+            <h1>Veg Fries</h1>
+            <h2>₹45</h2>
+            <button
+              class="cart-btn"
+              id="vegFriesAddCart"
+              onclick="vegFriesAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns23">
+              <button id="minus23" onclick="deleteToCart('Veg Fries', 45)">
+                -
+              </button>
+              <button id="num23">1</button>
+              <button id="plus23" onclick="addToCart('Veg Fries', 45)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="https://res.cloudinary.com/dtrknkktt/image/upload/v1718526804/IMG-20240616-WA0009_hlh5bl.jpg"
+            />
+            <h1>Mayo Fries</h1>
+            <h2>₹69</h2>
+            <button
+              class="cart-btn"
+              id="mayoFriesAddCart"
+              onclick="mayoFriesAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns24">
+              <button id="minus24" onclick="deleteToCart('Mayo Fries', 69)">
+                -
+              </button>
+              <button id="num24">1</button>
+              <button id="plus24" onclick="addToCart('Mayo Fries', 69)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="https://res.cloudinary.com/dtrknkktt/image/upload/v1718526946/IMG-20240616-WA0012_zf2pf3.jpg"
+            />
+            <h1>Peri Peri Fries</h1>
+            <h2>₹79</h2>
+            <button
+              class="cart-btn"
+              id="periPeriFriesAddCart"
+              onclick="periPeriFriesAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns25">
+              <button
+                id="minus25"
+                onclick="deleteToCart('Peri Peri Fries', 79)"
+              >
+                -
+              </button>
+              <button id="num25">1</button>
+              <button id="plus25" onclick="addToCart('Peri Peri Fries', 79)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="https://res.cloudinary.com/dtrknkktt/image/upload/v1717907611/HD-wallpaper-french-fries-fastfood-potato-close-up_kreppc.jpg"
+            />
+            <h1>French Fries</h1>
+            <h2>₹55</h2>
+            <button
+              class="cart-btn"
+              id="frenchFriesAddCart"
+              onclick="frenchFriesAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns26">
+              <button id="minus26" onclick="deleteToCart('French Fries', 55)">
+                -
+              </button>
+              <button id="num26">1</button>
+              <button id="plus26" onclick="addToCart('French Fries', 55)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="https://res.cloudinary.com/dtrknkktt/image/upload/v1717934303/thumb-1920-1322539_m1nwwn.png"
+            />
+            <h1>Honey Chilli Potato</h1>
+            <h2>₹89</h2>
+            <button
+              class="cart-btn"
+              id="honeyChilliPotatoAddCart"
+              onclick="honeyChilliPotatoAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns27">
+              <button
+                id="minus27"
+                onclick="deleteToCart('Honey Chilli Potato', 89)"
+              >
+                -
+              </button>
+              <button id="num27">1</button>
+              <button
+                id="plus27"
+                onclick="addToCart('Honey Chilli Potato', 89)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+        <button class="back_btn" id="back2" onclick="back()">Back</button>
+      </div>
+      <div class="combosContainer" id="combosContainer">
+        <div class="combosContainers">
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets/Chilli-Paneer-gravy-640x531.jpg"
+            />
+            <h1>Chilli Paneer And Fried Rice</h1>
+            <h2>₹179</h2>
+            <button
+              class="cart-btn"
+              id="chilliPaneerAndFriedriceAddCart"
+              onclick="chilliPaneerAndFriedriceAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns28">
+              <button
+                id="minus28"
+                onclick="deleteToCart('Chilli paneer and Fried Rice', 179)"
+              >
+                -
+              </button>
+              <button id="num28">1</button>
+              <button
+                id="plus28"
+                onclick="addToCart('Chilli paneer and Fried Rice', 179)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets/c463c92140a5317c6d60b36ff976edf0.jpg"
+            />
+            <h1>Manchurian Chilli With Rice</h1>
+            <h2>₹149</h2>
+            <button
+              class="cart-btn"
+              id="ManchurianChilliWithRiceAddCart"
+              onclick="ManchurianChilliWithRiceAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns29">
+              <button
+                id="minus29"
+                onclick="deleteToCart('Manchurian Chilli With Rice', 149)"
+              >
+                -
+              </button>
+              <button id="num29">1</button>
+              <button
+                id="plus29"
+                onclick="addToCart('Manchurian Chilli With Rice', 149)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets/a7c8ff2c466e535866d5bbb88b4e97c4.jpg"
+            />
+            <h1 style="font-size: 20px; overflow: hidden">
+              Cheese Pizza [7 inches] with Kulhad Pizza [250 ml]
+            </h1>
+            <h2>₹350</h2>
+            <button
+              class="cart-btn"
+              id="cheesePizzawithKulhadPizzaAddCart"
+              onclick="cheesePizzawithKulhadPizzaAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns30">
+              <button id="minus30" onclick="deleteToCart('Chilli potato', 350)">
+                -
+              </button>
+              <button id="num30">1</button>
+              <button id="plus30" onclick="addToCart('Chilli potato', 350)">
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+        <button class="back_btn" id="back2" onclick="back()">Back</button>
+      </div>
+      <div class="rollContainer" id="rollContainer">
+        <div class="rollContainers">
+          <div class="cart">
+            <img class="cart-img" src="assets2/unnamed.jpg" />
+            <h1>Deep Fry Spring Roll</h1>
+            <h2>₹ 49</h2>
+            <button
+              class="cart-btn"
+              onclick="deepfryrollAddCart()"
+              id="deepfryrollAddCart"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns31">
+              <button
+                id="minus31"
+                onclick="deleteToCart('Deep Fry Spring Roll', 49)"
+              >
+                -
+              </button>
+              <button id="num31">1</button>
+              <button
+                id="plus31"
+                onclick="addToCart('Deep Fry Spring Roll', 49)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+        <button class="back_btn" id="back" onclick="back()">Back</button>
+      </div>
+      <div class="pizzaContainer" id="pizzaContainer">
+        <div class="pizzaContainers">
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/veg-pizza-vegetable-on-table-260nw-2404488197.webp"
+            />
+            <h1>Mix Veg Pizza</h1>
+            <h2>₹149</h2>
+            <button
+              class="cart-btn"
+              id="mixVegPizzaAddCart"
+              onclick="mixVegPizzaAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns32">
+              <button id="minus32" onclick="deleteToCart('mix veg pizza', 149)">
+                -
+              </button>
+              <button id="num32">1</button>
+              <button id="plus32" onclick="addToCart('mix veg pizza', 149)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img class="cart-img" src="assets2/paneer-pizza-recipe-1.jpg" />
+            <h1>Cheese Pizza</h1>
+            <h2>₹249</h2>
+            <button
+              class="cart-btn"
+              id="cheesePizzaAddCart"
+              onclick="cheesePizzaAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns33">
+              <button id="minus33" onclick="deleteToCart('cheese Pizza', 249)">
+                -
+              </button>
+              <button id="num33">1</button>
+              <button id="plus33" onclick="addToCart('cheese Pizza',249)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/Photo-to-PDF_2024-06-15_10-38-33-pdf5.png"
+            />
+            <h1>Paneer Pizza</h1>
+            <h2>₹199</h2>
+            <button
+              class="cart-btn"
+              id="paneeerPizzaAddCart"
+              onclick="paneeerPizzaAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns34">
+              <button id="minus34" onclick="deleteToCart('Paneer Pizza', 199)">
+                -
+              </button>
+              <button id="num34">1</button>
+              <button id="plus34" onclick="addToCart('Paneer Pizza', 199)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img class="cart-img" src="assets2/double-cheese-pizza.jpg" />
+            <h1>Douple Cheese Pizza</h1>
+            <h2>₹299</h2>
+            <button
+              class="cart-btn"
+              id="doubleCheesePizzaAddCart"
+              onclick="doubleCheesePizzaAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns35">
+              <button
+                id="minus35"
+                onclick="deleteToCart('Douple Cheese Pizza', 299)"
+              >
+                -
+              </button>
+              <button id="num35">1</button>
+              <button
+                id="plus35"
+                onclick="addToCart('Douple Cheese Pizza', 299)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img class="cart-img" src="assets2/paneer-pizza-recipe27.webp" />
+            <h1>Cheese & Paneer Pizza</h1>
+            <h2>₹249</h2>
+            <button
+              class="cart-btn"
+              id="cheeseandPaneerPizzaAddCart"
+              onclick="cheeseandPaneerPizzaAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns36">
+              <button
+                id="minus36"
+                onclick="deleteToCart('Cheese & Paneer Pizza', 249)"
+              >
+                -
+              </button>
+              <button id="num36">1</button>
+              <button
+                id="plus36"
+                onclick="addToCart('Cheese & Paneer Pizza', 249)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/Photo-to-PDF_2024-06-15_10-38-33-pdf6.png"
+            />
+            <h1>Sweet Corn Pizza</h1>
+            <h2>₹169</h2>
+            <button
+              class="cart-btn"
+              id="sweetCornPizzaAddCart"
+              onclick="sweetCornPizzaAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns37">
+              <button
+                id="minus37"
+                onclick="deleteToCart('Sweet Corn Pizza', 169)"
+              >
+                -
+              </button>
+              <button id="num37">1</button>
+              <button id="plus37" onclick="addToCart('Sweet Corn Pizza', 169)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/Photo-to-PDF_2024-06-15_10-38-33-pdf1.png"
+            />
+            <h1>Handcrafted Onion Pizza</h1>
+            <h2>₹139</h2>
+            <button
+              class="cart-btn"
+              id="handcraftedOnionPizzaAddCart"
+              onclick="handcraftedOnionPizzaAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns38">
+              <button
+                id="minus38"
+                onclick="deleteToCart('Handcrafted Onion Pizza', 139)"
+              >
+                -
+              </button>
+              <button id="num38">1</button>
+              <button
+                id="plus38"
+                onclick="addToCart('Handcrafted Onion Pizza', 139)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/Photo-to-PDF_2024-06-15_10-38-33-pdf4.png"
+            />
+            <h1>Sweet Corn And Paneer Pizza</h1>
+            <h2>₹189</h2>
+            <button
+              class="cart-btn"
+              id="sweetCornAndPaneerPizzaAddCart"
+              onclick="sweetCornAndPaneerPizzaAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns39">
+              <button
+                id="minus39"
+                onclick="deleteToCart('Sweet Corn And Paneer Pizza', 189)"
+              >
+                -
+              </button>
+              <button id="num39">1</button>
+              <button
+                id="plus39"
+                onclick="addToCart('Sweet Corn And Paneer Pizza', 189)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img class="cart-img" src="assets2/new-product.jpg" />
+            <h1>Onion & Paneer Pizza Handcrafted</h1>
+            <h2>₹179</h2>
+            <button
+              class="cart-btn"
+              id="onionAndPaneerPizzaHandcraftedAddCart"
+              onclick="onionAndPaneerPizzaHandcraftedAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns40">
+              <button
+                id="minus40"
+                onclick="deleteToCart('Onion & Paneer Pizza Handcrafted', 179)"
+              >
+                -
+              </button>
+              <button id="num40">1</button>
+              <button
+                id="plus40"
+                onclick="addToCart('Onion & Paneer Pizza Handcrafted', 179)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/slide-paneer-pizza-vegetarian-indian-food-paneer-pizza-vegetarian-indian-food-175001151.webp"
+            />
+            <h1>Cheese & Paneer Pizza Handcrafted</h1>
+            <h2>₹ 299</h2>
+            <button
+              class="cart-btn"
+              id="cheeseAndPaneerPizzaHandcraftedAddCart"
+              onclick="cheeseAndPaneerPizzaHandcraftedAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns41">
+              <button
+                id="minus41"
+                onclick="deleteToCart('Cheese & Paneer Pizza Handcrafted', 299)"
+              >
+                -
+              </button>
+              <button id="num41">1</button>
+              <button
+                id="plus41"
+                onclick="addToCart('Cheese & Paneer Pizza Handcrafted', 299)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img class="cart-img" src="assets2/Paneer-Tikka-Pizza.jpg" />
+            <h1>Paneer Tikka Pizza</h1>
+            <h2>₹399</h2>
+            <button
+              class="cart-btn"
+              id="PaneerTikkaPizzaAddCart"
+              onclick="PaneerTikkaPizzaAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns42">
+              <button
+                id="minus42"
+                onclick="deleteToCart('Paneer Tikka Pizza', 399)"
+              >
+                -
+              </button>
+              <button id="num42">1</button>
+              <button
+                id="plus42"
+                onclick="addToCart('Paneer Tikka Pizza', 399)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img class="cart-img" src="assets2/sddefault.jpg" />
+            <h1>Cheese Bombay Special Pizza</h1>
+            <h2>₹ 599</h2>
+            <button
+              class="cart-btn"
+              id="cheeseBombaySpecialPizzaAddCart"
+              onclick="cheeseBombaySpecialPizzaAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns43">
+              <button
+                id="minus43"
+                onclick="deleteToCart('Cheese Bombay Special Pizza', 599)"
+              >
+                -
+              </button>
+              <button id="num43">1</button>
+              <button
+                id="plus43"
+                onclick="addToCart('Cheese Bombay Special Pizza', 599)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img class="cart-img" src="assets2/unnamed2.webp" />
+            <h1>Royal Bombay Pizza</h1>
+            <h2>₹899</h2>
+            <button
+              class="cart-btn"
+              id="RoyalBombayPizzaAddCart"
+              onclick="RoyalBombayPizzaAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns44">
+              <button
+                id="minus44"
+                onclick="deleteToCart('Royal Bombay Pizza', 899)"
+              >
+                -
+              </button>
+              <button id="num44">1</button>
+              <button
+                id="plus44"
+                onclick="addToCart('Royal Bombay Pizza', 899)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/heart-shaped-pepperoni-pizza-recipe-1024x561.jpg"
+            />
+            <h1>Heart Pizza</h1>
+            <h2>₹179</h2>
+            <button
+              class="cart-btn"
+              id="heartPizzaAddCart"
+              onclick="heartPizzaAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns45">
+              <button id="minus45" onclick="deleteToCart('Heart Pizza', 179)">
+                -
+              </button>
+              <button id="num45">1</button>
+              <button id="plus45" onclick="addToCart('Heart Pizza', 179)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img class="cart-img" src="assets2/Kulhad-Pizza.jpg" />
+            <h1>Kullad Pizza</h1>
+            <h2>₹175</h2>
+            <button
+              class="cart-btn"
+              id="kulladPizzaAddCart"
+              onclick="kulladPizzaAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns4a">
+              <button id="minus4a" onclick="deleteToCart('Kullad Pizza', 175)">
+                -
+              </button>
+              <button id="num4a">1</button>
+              <button id="plus4a" onclick="addToCart('Kullad Pizza', 175)">
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <button class="back_btn" id="back2" onclick="back()">Back</button>
+      </div>
+      <div class="cakesAndPastriesContainer" id="cakesAndPastriesContainer">
+        <div class="cakesAndPastriesContainers">
+          <div class="cart">
+            <img class="cart-img" src="assets2/strawbeeryu-cake.png" />
+            <h1>Strawberry Cake[500g]</h1>
+            <h2>₹380</h2>
+            <button
+              class="cart-btn"
+              id="strawberryCake500gAddCart"
+              onclick="strawberryCake500gAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns46">
+              <button
+                id="minus46"
+                onclick="deleteToCart('Strawberry Cake[500g]', 380)"
+              >
+                -
+              </button>
+              <button id="num46">1</button>
+              <button
+                id="plus46"
+                onclick="addToCart('Strawberry Cake[500g]', 380)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img class="cart-img" src="assets2/3-65.webp" />
+            <h1>Red Velvet Cake [500g]</h1>
+            <h2>₹600</h2>
+            <button
+              class="cart-btn"
+              id="redVelvetCake500gAddCart"
+              onclick="redVelvetCake500gAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns47">
+              <button
+                id="minus47"
+                onclick="deleteToCart('Red Velvet Cake 500g', 600)"
+              >
+                -
+              </button>
+              <button id="num47">1</button>
+              <button
+                id="plus47"
+                onclick="addToCart('Red Velvet Cake 500g',600)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/p-classic-black-forest-cake-1-kg--108743-m.jpg"
+            />
+            <h1>Black Forest Cake [500g]</h1>
+            <h2>₹400</h2>
+            <button
+              class="cart-btn"
+              id="blackForestCake500gAddCart"
+              onclick="blackForestCake500gAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns48">
+              <button
+                id="minus48"
+                onclick="deleteToCart('Black Forest Cake [500g]', 400)"
+              >
+                -
+              </button>
+              <button id="num48">1</button>
+              <button
+                id="plus48"
+                onclick="addToCart('Black Forest Cake [500g]', 400)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img class="cart-img" src="assets2/IMG_4149_JPG.webp" />
+            <h1>Butterscotch Cake [500g]</h1>
+            <h2>₹380</h2>
+            <button
+              class="cart-btn"
+              id="butterscotchCake500gAddCart"
+              onclick="butterscotchCake500gAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns49">
+              <button
+                id="minus49"
+                onclick="deleteToCart('Butterscotch Cake [500g]', 380)"
+              >
+                -
+              </button>
+              <button id="num49">1</button>
+              <button
+                id="plus49"
+                onclick="addToCart('Butterscotch Cake [500g]', 380)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/Vanilla-Cake-1-Kg-A-800x716.jpg"
+            />
+            <h1>Vanilla Cake [500g]</h1>
+            <h2>₹ 380</h2>
+            <button
+              class="cart-btn"
+              id="vanillaCake500gAddCart"
+              onclick="vanillaCake500gAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns50">
+              <button
+                id="minus50"
+                onclick="deleteToCart('Vanilla Cake [500g]', 380)"
+              >
+                -
+              </button>
+              <button id="num50">1</button>
+              <button
+                id="plus50"
+                onclick="addToCart('Vanilla Cake [500g]', 380)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/7c286808_amazing-pineapple-cake_1.webp"
+            />
+            <h1>Pineapple Cake [500g]</h1>
+            <h2>₹380</h2>
+            <button
+              class="cart-btn"
+              id="pineappleCake500gAddCart"
+              onclick="pineappleCake500gAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns51">
+              <button
+                id="minus51"
+                onclick="deleteToCart('Pineapple Cake [500g]', 380)"
+              >
+                -
+              </button>
+              <button id="num51">1</button>
+              <button
+                id="plus51"
+                onclick="addToCart('Pineapple Cake [500g]', 380)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/Best-Moist-Chocolate-Cake1-1.jpg"
+            />
+            <h1>Chocalate Cake [500g]</h1>
+            <h2>₹430</h2>
+            <button
+              class="cart-btn"
+              id="chocalateCake500gAddCart"
+              onclick="chocalateCake500gAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns52">
+              <button
+                id="minus52"
+                onclick="deleteToCart('Chocalate Cake [500g]', 430)"
+              >
+                -
+              </button>
+              <button id="num52">1</button>
+              <button
+                id="plus52"
+                onclick="addToCart('Chocalate Cake [500g]', 430)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/White Forestt-1821x1581.jpg.webp"
+            />
+            <h1>White Forest Cake [500g]</h1>
+            <h2>₹450</h2>
+            <button
+              class="cart-btn"
+              id="whiteForestCake500gAddCart"
+              onclick="whiteForestCake500gAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns53">
+              <button
+                id="minus53"
+                onclick="deleteToCart('White Forest Cake [500g]', 450)"
+              >
+                -
+              </button>
+              <button id="num53">1</button>
+              <button
+                id="plus53"
+                onclick="addToCart('White Forest Cake [500g]', 450)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/plate-slice-tasty-homemade-chocolate-600nw-1295709469.webp"
+            />
+            <h1>Chocalate Pastry</h1>
+            <h2>₹49</h2>
+            <button
+              class="cart-btn"
+              id="chocalatePastryAddCart"
+              onclick="chocalatePastryAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns54">
+              <button
+                id="minus54"
+                onclick="deleteToCart('Chocalate Pastry', 49)"
+              >
+                -
+              </button>
+              <button id="num54">1</button>
+              <button id="plus54" onclick="addToCart('Chocalate Pastry', 49)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img class="cart-img" src="assets2/Butterscotch-Pastry-new-1.jpg" />
+            <h1>Butterscotch Pastry</h1>
+            <h2>₹ 45</h2>
+            <button
+              class="cart-btn"
+              id="butterscotchPastryAddCart"
+              onclick="butterscotchPastryAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns55">
+              <button
+                id="minus55"
+                onclick="deleteToCart('Butterscotch Pastry', 45)"
+              >
+                -
+              </button>
+              <button id="num55">1</button>
+              <button
+                id="plus55"
+                onclick="addToCart('Butterscotch Pastry', 45)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/0a0a5833db05b3a0fa1067604fb9560d.jpg"
+            />
+            <h1>Pineapple Pastry</h1>
+            <h2>₹45</h2>
+            <button
+              class="cart-btn"
+              id="pineapplePastryAddCart"
+              onclick="pineapplePastryAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns56">
+              <button
+                id="minus56"
+                onclick="deleteToCart('Pineapple Pastry', 45)"
+              >
+                -
+              </button>
+              <button id="num56">1</button>
+              <button id="plus56" onclick="addToCart('Pineapple Pastry', 45)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/1599024928_1589780013_redvelvetpastry99.jpg"
+            />
+            <h1>Red Velvet Pastry</h1>
+            <h2>₹ 69</h2>
+            <button
+              class="cart-btn"
+              id="redVelvetPastryAddCart"
+              onclick="redVelvetPastryAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns57">
+              <button
+                id="minus57"
+                onclick="deleteToCart('Red Velvet Pastry', 69)"
+              >
+                -
+              </button>
+              <button id="num57">1</button>
+              <button id="plus57" onclick="addToCart('Red Velvet Pastry', 69)">
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <button class="back_btn" id="back2" onclick="back()">Back</button>
+      </div>
+      <div class="DrinksContainer" id="DrinksContainer">
+        <div class="DrinksContainers">
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/rose-lassi-with-icecreamvalentine-special-recipe-main-photo.jpg"
+            />
+            <h1>Special Cream Lassi</h1>
+            <h2>₹99</h2>
+            <button
+              class="cart-btn"
+              id="specialCreamLassiAddCart"
+              onclick="specialCreamLassiAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns58">
+              <button
+                id="minus58"
+                onclick="deleteToCart('Special Cream Lassi', 99)"
+              >
+                -
+              </button>
+              <button id="num58">1</button>
+              <button
+                id="plus58"
+                onclick="addToCart('Special Cream Lassi', 99)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img class="cart-img" src="assets2/thumb__700_0_0_0_auto.jpg" />
+            <h1>Badam Shake</h1>
+            <h2>₹ 99</h2>
+            <button
+              class="cart-btn"
+              id="badamShakeAddCart"
+              onclick="badamShakeAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns59">
+              <button id="minus59" onclick="deleteToCart('Badam Shake', 99)">
+                -
+              </button>
+              <button id="num59">1</button>
+              <button id="plus59" onclick="addToCart('Badam Shake',99)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/mosambi_620x350_61479372568.jpg"
+            />
+            <h1>Mausami Juice</h1>
+            <h2>₹59</h2>
+            <button
+              class="cart-btn"
+              id="mausamiJuiceAddCart"
+              onclick="mausamiJuiceAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns60">
+              <button id="minus60" onclick="deleteToCart('Mausami Juice', 59)">
+                -
+              </button>
+              <button id="num60">1</button>
+              <button id="plus60" onclick="addToCart('Mausami Juice', 59)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/tasty-pineapple-juice-recipe-to-improve-sleep-little-west.webp"
+            />
+            <h1>Pineapple Juice</h1>
+            <h2>₹69</h2>
+            <button
+              class="cart-btn"
+              id="pineappleJuiceAddCart"
+              onclick="pineappleJuiceAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns61">
+              <button
+                id="minus61"
+                onclick="deleteToCart('Pineapple Juice', 69)"
+              >
+                -
+              </button>
+              <button id="num61">1</button>
+              <button id="plus61" onclick="addToCart('Pineapple Juice', 69)">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart">
+            <img
+              class="cart-img"
+              src="assets2/pomegranate-health-benenfits.webp"
+            />
+            <h1>Annar Juice</h1>
+            <h2>₹ 99</h2>
+            <button
+              class="cart-btn"
+              id="annarJuiceAddCart"
+              onclick="annarJuiceAddCart()"
+            >
+              Add
+            </button>
+            <div class="add-btn-container" id="addBtns62">
+              <button id="minus62" onclick="deleteToCart('Annar Juice', 99)">
+                -
+              </button>
+              <button id="num62">1</button>
+              <button id="plus62" onclick="addToCart('Annar Juice', 99)">
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <button class="back_btn" id="back2" onclick="back()">Back</button>
+      </div>
+    </section>
+    <header1 class="navbar" id="navbar">
+      <div class="navels">
+        <div class="nav1" id="nav1"></div>
+        <div class="nav1" id="nav2"></div>
+      </div>
+      <img
+        src="assets/arrows.png"
+        class="arrow-btn"
+        onclick="payment()"
+        id="payment"
+        href="cart.html"
+      />
+      <!-- <div class="nav1" id="nav3"></div> -->
+      <!-- <button class="banner_btn" href="cart.html" id="payment">pay</button> -->
+    </header1>
+
+    <section class="slider">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <img
+              src="https://res.cloudinary.com/dtrknkktt/image/upload/v1717922943/360_F_607837697_RaFl9VbfPVgQReI63ZoKsZNQCqKu0lI4_igy8o7.jpg"
+              class="carousel-img d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://res.cloudinary.com/dtrknkktt/image/upload/v1717922985/Gobi-Manchurian-Recipe_dmtapf.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item active">
+            <img
+              src="https://res.cloudinary.com/dtrknkktt/image/upload/v1717923014/pizza-5179939_640_d0layv.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+    <section class="about">
+      <hr class="hr" />
+      <h1 class="about-h1">About Us</h1>
+      <div class="about-content">
+        <img
+          src="https://res.cloudinary.com/dtrknkktt/image/upload/v1715839464/3d-business-a-group-of-cheerful-young-people_gdrjed.png"
+          class="about-img"
+          alt="about"
+          \
+        />
+
+        <div class="about-content-text">
+          <h1 class="about_h1">We Are Bombay Fast Food</h1>
+          <p class="about-p">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humour, or randomised words which don't look even slightly
+            believable. If you are going to use a passage of Lorem Ipsum, you
+            need to be sure there isn't anything embarrassing hidden in the
+            middle of text. All
+          </p>
+        </div>
+      </div>
+    </section>
+    <button id="openModalBtn">Open Modal</button>
+
+    <section class="contact sec-pad dynamicBg" id="contact">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main heading-sec__main--lt">Contact</span>
+          <span class="heading-sec__sub heading-sec__sub--lt">
+            Feel free to Contact me by submitting the form below and I will get
+            back to you as soon as possible
+          </span>
+        </h2>
+        <div class="contact__form-container">
+          <form
+            action="#"
+            class="contact__form"
+            method="post"
+            onsubmit=" return sender()"
+          >
+            <input name="form-name" type="hidden" value="form 1" />
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="name">Name</label>
+              <input
+                class="contact__form-input"
+                id="name"
+                name="name"
+                placeholder="Enter Your Name"
+                required=""
+                type="text"
+              />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="name">Mobile</label>
+              <input
+                class="contact__form-input"
+                id="phone"
+                name="Phone"
+                placeholder="Enter Your Phone Number"
+                required=""
+                type="text"
+              />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="email">Email</label>
+              <input
+                class="contact__form-input"
+                id="email"
+                name="email"
+                placeholder="Enter Your Email"
+                required=""
+                type="email"
+              />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="message">Message</label>
+              <textarea
+                class="contact__form-input"
+                cols="30"
+                id="message"
+                name="message"
+                placeholder="Enter Your Message"
+                required=""
+                rows="10"
+              ></textarea>
+            </div>
+            <div class="btn-container">
+              <button
+                class="btn btn--theme contact__btn"
+                type="submit"
+                value="Send"
+                id="btn"
+              >
+                Submit
+              </button>
+              <!-- <button type="submit" value="send" onclick="checkout()">submit</button> -->
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div class="footer-content">
+        <div class="social-media">
+          <a
+            href="https://www.instagram.com/bombayfastfood2024?igsh=bzI1NTA5ZWhoNjJs"
+          >
+            <img
+              href="#"
+              src="https://res.cloudinary.com/dtrknkktt/image/upload/v1713343168/317750_linkedin_icon_oftt9c.png"
+              class="social"
+            />
+          </a>
+          <a
+            href="https://www.instagram.com/bombayfastfood2024?igsh=bzI1NTA5ZWhoNjJs"
+          >
+            <img
+              href="#"
+              src="https://res.cloudinary.com/dtrknkktt/image/upload/v1715842165/icons8-instagram-188_isgayp.png"
+              class="social"
+            />
+          </a>
+          <a
+            href="https://www.instagram.com/bombayfastfood2024?igsh=bzI1NTA5ZWhoNjJs"
+          >
+            <img
+              href="#contact"
+              src="https://res.cloudinary.com/dtrknkktt/image/upload/v1715842438/icons8-facebook-375_a5cey4.png"
+              class="social"
+            />
+          </a>
+        </div>
+        <div class="contact-now">
+          <h1>Contact Us</h1>
+
+          <h2>
+            Ph: 9648867452 <br />
+            utkashabhayshau@gmail.com
+          </h2>
+          <p>
+            Near Allahabad bank<br />
+            Shahzapur<br />
+            Akbarpur Ambedkar Nagar, 224122
+          </p>
+        </div>
+      </div>
+      <div class="footer-para">
+        <p>&copy; 2024 Bombay Fast Food Ltd. All rights reserved</p>
+      </div>
+    </div>
+
+    <script src="creativetask5.js"></script>
+    <!-- <script src="creativetask.js"></script> -->
+  </body>
+</html>
+is
